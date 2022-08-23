@@ -1,0 +1,100 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.10)
+  - libwebp (1.1.0):
+    - libwebp/demux (= 1.1.0)
+    - libwebp/mux (= 1.1.0)
+    - libwebp/webp (= 1.1.0)
+  - libwebp/demux (1.1.0):
+    - libwebp/webp
+  - libwebp/mux (1.1.0):
+    - libwebp/demux
+  - libwebp/webp (1.1.0)
+  - netfox (1.21.0)
+  - Networkable (1.1.0)
+  - Nuke (9.5.0)
+  - Nuke-WebP-Plugin (6.0.1):
+    - libwebp (= 1.1.0)
+    - Nuke (~> 9.0)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
+  - ObjectMapper (4.2.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SVPullToRefresh (0.4.1)
+  - SwifterSwift (5.2.0):
+    - SwifterSwift/AppKit (= 5.2.0)
+    - SwifterSwift/CoreAnimation (= 5.2.0)
+    - SwifterSwift/CoreGraphics (= 5.2.0)
+    - SwifterSwift/CoreLocation (= 5.2.0)
+    - SwifterSwift/Dispatch (= 5.2.0)
+    - SwifterSwift/Foundation (= 5.2.0)
+    - SwifterSwift/MapKit (= 5.2.0)
+    - SwifterSwift/SceneKit (= 5.2.0)
+    - SwifterSwift/SpriteKit (= 5.2.0)
+    - SwifterSwift/StoreKit (= 5.2.0)
+    - SwifterSwift/SwiftStdlib (= 5.2.0)
+    - SwifterSwift/UIKit (= 5.2.0)
+  - SwifterSwift/AppKit (5.2.0)
+  - SwifterSwift/CoreAnimation (5.2.0)
+  - SwifterSwift/CoreGraphics (5.2.0)
+  - SwifterSwift/CoreLocation (5.2.0)
+  - SwifterSwift/Dispatch (5.2.0)
+  - SwifterSwift/Foundation (5.2.0)
+  - SwifterSwift/MapKit (5.2.0)
+  - SwifterSwift/SceneKit (5.2.0)
+  - SwifterSwift/SpriteKit (5.2.0)
+  - SwifterSwift/StoreKit (5.2.0)
+  - SwifterSwift/SwiftStdlib (5.2.0)
+  - SwifterSwift/UIKit (5.2.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - netfox
+  - Networkable
+  - Nuke
+  - Nuke-WebP-Plugin
+  - NVActivityIndicatorView (= 4.8.0)
+  - ObjectMapper
+  - RxCocoa
+  - SVPullToRefresh
+  - SwifterSwift
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - libwebp
+    - netfox
+    - Networkable
+    - Nuke
+    - Nuke-WebP-Plugin
+    - NVActivityIndicatorView
+    - ObjectMapper
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SVPullToRefresh
+    - SwifterSwift
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  libwebp: 946cb3063cea9236285f7e9a8505d806d30e07f3
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  Networkable: dad0e62dee81596927e4bacfecbaea5f6823e179
+  Nuke: 6f400a4ea957e09149ec335a3c6acdcc814d89e4
+  Nuke-WebP-Plugin: ea80971975a0fff00900a0ad19bc146d6759ee25
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+
+PODFILE CHECKSUM: 8b4825e083d4f2344e6c51644191d118505d5b57
+
+COCOAPODS: 1.11.3
