@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C077B1F28B61F42004509BF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B1E28B61F42004509BF /* PopupView.swift */; };
+		5C077B2128B62124004509BF /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2028B62124004509BF /* UIApplication+Ext.swift */; };
+		5C077B2328B62162004509BF /* BaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2228B62162004509BF /* BaseXibView.swift */; };
+		5C077B2528B623D5004509BF /* SubmitChangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2428B623D5004509BF /* SubmitChangesView.swift */; };
+		5C077B2728B6246A004509BF /* SubmitChangesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C077B2628B6246A004509BF /* SubmitChangesView.xib */; };
 		5C39994728B4CB8E00103DD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39994628B4CB8E00103DD3 /* AppDelegate.swift */; };
 		5C39994928B4CB8E00103DD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39994828B4CB8E00103DD3 /* SceneDelegate.swift */; };
 		5C39994B28B4CB8E00103DD3 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C39994A28B4CB8E00103DD3 /* ProductViewController.swift */; };
@@ -34,6 +39,11 @@
 
 /* Begin PBXFileReference section */
 		23A2C2FEF3494EF243036AF9 /* Pods-TekoProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.debug.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.debug.xcconfig"; sourceTree = "<group>"; };
+		5C077B1E28B61F42004509BF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		5C077B2028B62124004509BF /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
+		5C077B2228B62162004509BF /* BaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXibView.swift; sourceTree = "<group>"; };
+		5C077B2428B623D5004509BF /* SubmitChangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitChangesView.swift; sourceTree = "<group>"; };
+		5C077B2628B6246A004509BF /* SubmitChangesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitChangesView.xib; sourceTree = "<group>"; };
 		5C39994328B4CB8E00103DD3 /* TekoProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekoProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C39994628B4CB8E00103DD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C39994828B4CB8E00103DD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +92,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C077B1A28B61DAD004509BF /* ProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5C077B1B28B61DBD004509BF /* TableCell */,
+				5C39994A28B4CB8E00103DD3 /* ProductViewController.swift */,
+			);
+			path = ProductViewController;
+			sourceTree = "<group>";
+		};
+		5C077B1B28B61DBD004509BF /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				5CDFA8EE28B4D6FB0073B4CE /* EditableProductTableViewCell.swift */,
+				5CDFA8EF28B4D6FB0073B4CE /* EditableProductTableViewCell.xib */,
+				5CDFA8F228B4D73A0073B4CE /* ProductTableViewCell.swift */,
+				5CDFA8F328B4D73A0073B4CE /* ProductTableViewCell.xib */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
+		5C077B1C28B61DCB004509BF /* SubmitChangesView */ = {
+			isa = PBXGroup;
+			children = (
+				5CDFA8ED28B4D6A60073B4CE /* TableCell */,
+				5C077B2428B623D5004509BF /* SubmitChangesView.swift */,
+				5C077B2628B6246A004509BF /* SubmitChangesView.xib */,
+			);
+			path = SubmitChangesView;
+			sourceTree = "<group>";
+		};
+		5C077B1D28B61F31004509BF /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				5C077B1E28B61F42004509BF /* PopupView.swift */,
+				5C077B2228B62162004509BF /* BaseXibView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		5C39993A28B4CB8E00103DD3 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +152,7 @@
 		5C39994528B4CB8E00103DD3 /* TekoProduct */ = {
 			isa = PBXGroup;
 			children = (
+				5C077B1D28B61F31004509BF /* CustomView */,
 				5CDFA8EB28B4D20E0073B4CE /* Constants.swift */,
 				5CDFA8E228B4D1930073B4CE /* Util */,
 				5CDFA8D728B4D18A0073B4CE /* Extensions */,
@@ -143,8 +193,8 @@
 		5CDFA8D028B4CDD90073B4CE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5CDFA8ED28B4D6A60073B4CE /* TableCell */,
-				5C39994A28B4CB8E00103DD3 /* ProductViewController.swift */,
+				5C077B1C28B61DCB004509BF /* SubmitChangesView */,
+				5C077B1A28B61DAD004509BF /* ProductViewController */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -177,6 +227,7 @@
 				5CDFA8DA28B4D18A0073B4CE /* Date+Ext.swift */,
 				5CDFA8DB28B4D18A0073B4CE /* NSObject+Ext.swift */,
 				5CDFA8DC28B4D18A0073B4CE /* UIView+Ext.swift */,
+				5C077B2028B62124004509BF /* UIApplication+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,10 +243,6 @@
 		5CDFA8ED28B4D6A60073B4CE /* TableCell */ = {
 			isa = PBXGroup;
 			children = (
-				5CDFA8EE28B4D6FB0073B4CE /* EditableProductTableViewCell.swift */,
-				5CDFA8EF28B4D6FB0073B4CE /* EditableProductTableViewCell.xib */,
-				5CDFA8F228B4D73A0073B4CE /* ProductTableViewCell.swift */,
-				5CDFA8F328B4D73A0073B4CE /* ProductTableViewCell.xib */,
 				5CDFA8F628B4D7560073B4CE /* SubmitProductTableViewCell.swift */,
 				5CDFA8F728B4D7560073B4CE /* SubmitProductTableViewCell.xib */,
 			);
@@ -276,6 +323,7 @@
 				5CDFA8F528B4D73A0073B4CE /* ProductTableViewCell.xib in Resources */,
 				5CDFA8F928B4D7560073B4CE /* SubmitProductTableViewCell.xib in Resources */,
 				5CDFA8F128B4D6FB0073B4CE /* EditableProductTableViewCell.xib in Resources */,
+				5C077B2728B6246A004509BF /* SubmitChangesView.xib in Resources */,
 				5C39994E28B4CB8E00103DD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,17 +381,21 @@
 				5CDFA8E428B4D1930073B4CE /* Util.swift in Sources */,
 				5CDFA8F428B4D73A0073B4CE /* ProductTableViewCell.swift in Sources */,
 				5CDFA8DD28B4D18A0073B4CE /* Error+Ext.swift in Sources */,
+				5C077B2328B62162004509BF /* BaseXibView.swift in Sources */,
 				5CDFA8EA28B4D1D90073B4CE /* BaseResponse.swift in Sources */,
 				5CDFA8DE28B4D18A0073B4CE /* UIImageView+Ext.swift in Sources */,
 				5CDFA8F828B4D7560073B4CE /* SubmitProductTableViewCell.swift in Sources */,
 				5C39994B28B4CB8E00103DD3 /* ProductViewController.swift in Sources */,
 				5CDFA8E928B4D1D90073B4CE /* Networking+Extension.swift in Sources */,
+				5C077B2528B623D5004509BF /* SubmitChangesView.swift in Sources */,
 				5CDFA8F028B4D6FB0073B4CE /* EditableProductTableViewCell.swift in Sources */,
+				5C077B1F28B61F42004509BF /* PopupView.swift in Sources */,
 				5CDFA8EC28B4D20E0073B4CE /* Constants.swift in Sources */,
 				5CDFA8DF28B4D18A0073B4CE /* Date+Ext.swift in Sources */,
 				5CDFA8E028B4D18A0073B4CE /* NSObject+Ext.swift in Sources */,
 				5C39994728B4CB8E00103DD3 /* AppDelegate.swift in Sources */,
 				5C39994928B4CB8E00103DD3 /* SceneDelegate.swift in Sources */,
+				5C077B2128B62124004509BF /* UIApplication+Ext.swift in Sources */,
 				5CDFA8E828B4D1D90073B4CE /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
