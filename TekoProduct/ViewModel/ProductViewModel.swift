@@ -12,6 +12,7 @@ class ProductViewModel: BaseViewModel {
     let repo: DefaultTekoRepository
     private let disposeBag = DisposeBag()
     var products: [Product] = []
+    var editedProducts: [Product] = []
     var colors: [Color] = []
     var output: ProductViewModel.Output
     

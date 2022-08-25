@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SVPullToRefresh
+import ActionSheetPicker_3_0
 
 class ProductViewController: UIViewController {
     @IBOutlet weak var tblContent: UITableView!
@@ -16,19 +17,27 @@ class ProductViewController: UIViewController {
     private let disposeBag = DisposeBag()
     let refreshControl = UIRefreshControl()
     
+    @IBOutlet weak var btnSubmit: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tblContent.addSubview(refreshControl)
         
-        tblContent.addInfiniteScrolling { [weak self] in
-            guard let self = self else { return }
-        }
+//        tblContent.addInfiniteScrolling { [weak self] in
+//            guard let self = self else { return }
+//        }
         
         viewModel.getColors()
         
         bindViewModel()
+    }
+    
+    @IBAction func btnSubmitTapped(_ sender: Any) {
+        let popup: SubmitChangesView = SubmitChangesView()
+        popup.products = viewModel.editedProducts
+        popup.colors = viewModel.colors
+        popup.showPopup()
     }
     
     @objc private func refreshData() {
@@ -48,7 +57,7 @@ class ProductViewController: UIViewController {
             .subscribe(onNext: { [weak self] isShowsInfiniteScrolling in
                 guard let self = self else { return }
                 self.refreshControl.endRefreshing()
-                self.tblContent.infiniteScrollingView.stopAnimating()
+//                self.tblContent.infiniteScrollingView.stopAnimating()
                 self.tblContent.reloadData()
                 self.tblContent.showsInfiniteScrolling = isShowsInfiniteScrolling
             }).disposed(by: disposeBag)
@@ -80,13 +89,41 @@ extension ProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var product = viewModel.products[indexPath.row]
+        
         var cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as? ProductTableViewCell
         if cell ==  nil {
             cell = Bundle.main.loadNibNamed("ProductTableViewCell", owner: self)?.first as? ProductTableViewCell
         }
-        let product = viewModel.products[indexPath.row]
-        cell?.reloadData(product)
+        cell?.product = product
+        cell?.reloadData()
         cell?.txtColor.text = viewModel.colors.first(where: { $0.id == product.color })?.name
+        
+        cell?.didEdit = { [weak self] in
+            guard let self = self else { return }
+            product.isEditing.toggle()
+            if product.isEditing {
+                self.viewModel.editedProducts.append(product)
+//                self.viewModel.editedProducts = self.viewModel.editedProducts.withoutDuplicates { p in
+//                    p.id
+//                }
+//                
+            }
+            tableView.reloadData()
+        }
+        
+        cell?.didChangeColor = { [weak self] in
+            guard let self = self else { return }
+            let picker: ActionSheetStringPicker = ActionSheetStringPicker(title: "Choose color", rows: self.viewModel.colors.map({ $0.name ?? [] ?? "" }), initialSelection: 0, doneBlock: { [weak self] _, _selectedIndex, _ in
+                guard let self = self else { return }
+                product.color = self.viewModel.colors[_selectedIndex].id
+                tableView.reloadData()
+            }, cancel: { _ in
+                
+            }, origin: cell?.btnChangeColor)
+            picker.show()
+        }
+        
         return cell ?? UITableViewCell()
     }
 }

@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-struct Product: Mappable, Codable {
+class Product: Mappable, Codable {
     var id: Int = 0
     var errorDescription: String = ""
     var name: String = ""
@@ -21,11 +21,11 @@ struct Product: Mappable, Codable {
         case id, errorDescription, name, sku, image, color
     }
 
-    init?(map: Map) {
+    required init?(map: Map) {
         mapping(map: map)
     }
 
-    mutating func mapping(map: Map) {
+    func mapping(map: Map) {
         id                  <- map["id"]
         errorDescription    <- map["errorDescription"]
         name                <- map["name"]

@@ -12,6 +12,7 @@ class SubmitChangesView: PopupView {
     @IBOutlet weak var tblContent: UITableView!
     @IBOutlet weak var btnOK: UIButton!
     var products: [Product] = []
+    var colors: [Color] = []
     @IBOutlet weak var heightTbl: NSLayoutConstraint!
     
     override init(frame: CGRect) {
@@ -19,8 +20,12 @@ class SubmitChangesView: PopupView {
         commonInit()
     }
     
+    override func showPopup() {
+        showPopupWithCompletion(nil, onController: Util.topViewController())
+    }
+    
     @IBAction func btnOKTapped(_ sender: Any) {
-        
+        dismissPopupWithCompletion(nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,7 +51,7 @@ extension SubmitChangesView: UITableViewDataSource {
         if cell ==  nil {
             cell = Bundle.main.loadNibNamed("SubmitProductTableViewCell", owner: self)?.first as? SubmitProductTableViewCell
         }
-        
+        cell?.reloadData(products[indexPath.row])
         return cell ?? UITableViewCell()
     }
 }

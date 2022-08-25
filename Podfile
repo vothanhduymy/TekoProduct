@@ -14,6 +14,7 @@ target 'TekoProduct' do
   pod 'Nuke'
   pod 'Nuke-WebP-Plugin'
   pod 'NVActivityIndicatorView', '4.8.0'
+  pod 'ActionSheetPicker-3.0'
 
 end
 

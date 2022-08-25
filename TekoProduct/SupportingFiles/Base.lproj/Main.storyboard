@@ -18,25 +18,43 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IHM-zA-d1l">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="cSm-gc-0Oi"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="uHv-c4-Bnc"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sK-GD-NtB">
+                                <rect key="frame" x="20" y="807" width="374" height="45"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0c9-lo-Hac"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSubmitTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Va3-QV-Es5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="IHM-zA-d1l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0s7-WU-DEr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8sK-GD-NtB" secondAttribute="trailing" constant="20" id="18t-Yi-Vlu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IHM-zA-d1l" secondAttribute="trailing" id="LPT-WH-Zrb"/>
+                            <constraint firstItem="8sK-GD-NtB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QFf-uP-Mzx"/>
+                            <constraint firstItem="8sK-GD-NtB" firstAttribute="top" secondItem="IHM-zA-d1l" secondAttribute="bottom" constant="10" id="fQU-Y3-1RZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8sK-GD-NtB" secondAttribute="bottom" constant="10" id="qyF-ct-ndp"/>
                             <constraint firstItem="IHM-zA-d1l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uWU-Z8-vaO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IHM-zA-d1l" secondAttribute="bottom" id="yqY-zw-WGT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Product list" id="hW3-eq-XNe"/>
                     <connections>
+                        <outlet property="btnSubmit" destination="8sK-GD-NtB" id="H9b-KZ-sQN"/>
                         <outlet property="tblContent" destination="IHM-zA-d1l" id="332-sH-X8M"/>
                     </connections>
                 </viewController>
@@ -64,6 +82,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
