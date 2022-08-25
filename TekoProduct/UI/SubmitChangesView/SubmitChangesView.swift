@@ -32,7 +32,7 @@ class SubmitChangesView: PopupView {
         tblContent.dataSource = self
         tblContent.delegate = self
         
-        heightTbl.constant =
+        heightTbl.constant = CGFloat(products.count * 175)
     }
 }
 

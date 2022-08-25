@@ -10,24 +10,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubmitProductTableViewCell" rowHeight="219" id="KGk-i7-Jjw" customClass="SubmitProductTableViewCell" customModule="TekoProduct" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="517" height="219"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SubmitProductTableViewCell" rowHeight="175" id="KGk-i7-Jjw" customClass="SubmitProductTableViewCell" customModule="TekoProduct" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="176"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="517" height="219"/>
+                <rect key="frame" x="0.0" y="0.0" width="517" height="176"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="nQ0-Ub-Vgi">
-                        <rect key="frame" x="5" y="10" width="198" height="198"/>
+                        <rect key="frame" x="5" y="10" width="156" height="156"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="nQ0-Ub-Vgi" secondAttribute="height" id="J9y-fq-Qdr"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bq1-4A-qse">
-                        <rect key="frame" x="213" y="10" width="294" height="198"/>
+                        <rect key="frame" x="171" y="10" width="336" height="156"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oE2-9w-PJW">
-                                <rect key="frame" x="0.0" y="0.0" width="294" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QRO-eo-SpO"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Error description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gs8-zp-6RI">
-                                <rect key="frame" x="0.0" y="52.5" width="294" height="40"/>
+                                <rect key="frame" x="0.0" y="45" width="336" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5du-wy-jEO"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SKU" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p3L-K8-pC9">
-                                <rect key="frame" x="0.0" y="105.5" width="294" height="40"/>
+                                <rect key="frame" x="0.0" y="90" width="336" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="tXB-GL-63j"/>
                                 </constraints>
@@ -51,7 +51,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Color" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXk-Lx-x2j">
-                                <rect key="frame" x="0.0" y="158" width="294" height="40"/>
+                                <rect key="frame" x="0.0" y="135" width="336" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ERL-LU-1Vq"/>
                                 </constraints>
@@ -61,7 +61,7 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmx-u1-mAh">
-                        <rect key="frame" x="0.0" y="218" width="517" height="1"/>
+                        <rect key="frame" x="0.0" y="176" width="517" height="1"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="D0o-1K-gtk"/>
@@ -82,7 +82,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="274.63768115942031" y="191.18303571428569"/>
+            <connections>
+                <outlet property="imgImage" destination="nQ0-Ub-Vgi" id="iI6-iv-PTS"/>
+                <outlet property="txtColor" destination="oXk-Lx-x2j" id="a4N-3q-Nt3"/>
+                <outlet property="txtErrorDes" destination="Gs8-zp-6RI" id="Sa4-sE-UVR"/>
+                <outlet property="txtName" destination="oE2-9w-PJW" id="KAR-j1-aZr"/>
+                <outlet property="txtSku" destination="p3L-K8-pC9" id="w2f-wr-1cA"/>
+            </connections>
+            <point key="canvasLocation" x="274.63768115942031" y="176.11607142857142"/>
         </tableViewCell>
     </objects>
     <resources>

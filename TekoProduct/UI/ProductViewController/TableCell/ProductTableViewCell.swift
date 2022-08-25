@@ -8,16 +8,28 @@
 import UIKit
 
 class ProductTableViewCell: UITableViewCell {
+    var isEdit: Bool = false
+    @IBOutlet weak var imgImage: UIImageView!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtErrorDes: UITextField!
+    @IBOutlet weak var txtSku: UITextField!
+    @IBOutlet weak var txtColor: UITextField!
 
+    @IBOutlet weak var btnEdit: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func btnEditTapped(_ sender: Any) {
     }
     
+    func reloadData(_ product: Product) {
+        imgImage.nukeLoadImage(url: URL(string: product.image))
+        txtName.text = product.name
+        txtErrorDes.text = product.errorDescription
+        txtSku.text = product.sku
+        txtColor.text = product.color?.name
+    }
 }
