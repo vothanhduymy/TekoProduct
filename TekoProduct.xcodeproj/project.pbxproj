@@ -37,6 +37,8 @@
 		5CDFA8F828B4D7560073B4CE /* SubmitProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDFA8F628B4D7560073B4CE /* SubmitProductTableViewCell.swift */; };
 		5CDFA8F928B4D7560073B4CE /* SubmitProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CDFA8F728B4D7560073B4CE /* SubmitProductTableViewCell.xib */; };
 		5CF5EBC728B72D08001145DB /* DefaultTekoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBC628B72D08001145DB /* DefaultTekoRepository.swift */; };
+		5CF5EBC928B72F2D001145DB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */; };
+		5CF5EBCB28B72F72001145DB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */; };
 		89483F39635440BCFC3572A2 /* Pods_TekoProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79329F0164E2115B7E9950C /* Pods_TekoProduct.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		5CDFA8F628B4D7560073B4CE /* SubmitProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitProductTableViewCell.swift; sourceTree = "<group>"; };
 		5CDFA8F728B4D7560073B4CE /* SubmitProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubmitProductTableViewCell.xib; sourceTree = "<group>"; };
 		5CF5EBC628B72D08001145DB /* DefaultTekoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTekoRepository.swift; sourceTree = "<group>"; };
+		5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		AB9F7CFB8DE72F21001D0306 /* Pods-TekoProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.release.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.release.xcconfig"; sourceTree = "<group>"; };
 		E79329F0164E2115B7E9950C /* Pods_TekoProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +191,8 @@
 		5CDFA8CE28B4CDAD0073B4CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */,
+				5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 				5CBFD8D928B7008B00C90E94 /* Color.swift in Sources */,
 				5CDFA8F428B4D73A0073B4CE /* ProductTableViewCell.swift in Sources */,
 				5CDFA8DD28B4D18A0073B4CE /* Error+Ext.swift in Sources */,
+				5CF5EBC928B72F2D001145DB /* BaseViewModel.swift in Sources */,
 				5CBFD8DB28B7011800C90E94 /* Product.swift in Sources */,
 				5C077B2328B62162004509BF /* BaseXibView.swift in Sources */,
 				5CDFA8EA28B4D1D90073B4CE /* BaseResponse.swift in Sources */,
@@ -409,6 +416,7 @@
 				5C39994928B4CB8E00103DD3 /* SceneDelegate.swift in Sources */,
 				5C077B2128B62124004509BF /* UIApplication+Ext.swift in Sources */,
 				5CDFA8E828B4D1D90073B4CE /* DataService.swift in Sources */,
+				5CF5EBCB28B72F72001145DB /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
