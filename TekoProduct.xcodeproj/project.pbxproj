@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		501CF085E7D84546FA762E77 /* Pods_TekoProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */; };
+		07B63FA1BAC348800EB709B8 /* Pods_TekoProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592A68C4E828A2F3AC24023 /* Pods_TekoProduct.framework */; };
 		5C077B1F28B61F42004509BF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B1E28B61F42004509BF /* PopupView.swift */; };
 		5C077B2128B62124004509BF /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2028B62124004509BF /* UIApplication+Ext.swift */; };
 		5C077B2328B62162004509BF /* BaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2228B62162004509BF /* BaseXibView.swift */; };
@@ -43,8 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.release.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.release.xcconfig"; sourceTree = "<group>"; };
-		04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.debug.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		5C077B1E28B61F42004509BF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		5C077B2028B62124004509BF /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		5C077B2228B62162004509BF /* BaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXibView.swift; sourceTree = "<group>"; };
@@ -79,7 +77,9 @@
 		5CF5EBC628B72D08001145DB /* DefaultTekoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTekoRepository.swift; sourceTree = "<group>"; };
 		5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B21002DFE421880812A6F53 /* Pods-TekoProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.debug.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.debug.xcconfig"; sourceTree = "<group>"; };
+		CFB114BB92B30F5F452E1FF1 /* Pods-TekoProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.release.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.release.xcconfig"; sourceTree = "<group>"; };
+		E592A68C4E828A2F3AC24023 /* Pods_TekoProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +87,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501CF085E7D84546FA762E77 /* Pods_TekoProduct.framework in Frameworks */,
+				07B63FA1BAC348800EB709B8 /* Pods_TekoProduct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		314DDE81DFD18361E1EC62EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E592A68C4E828A2F3AC24023 /* Pods_TekoProduct.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C077B1A28B61DAD004509BF /* ProductViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +147,7 @@
 				5C39994528B4CB8E00103DD3 /* TekoProduct */,
 				5C39994428B4CB8E00103DD3 /* Products */,
 				A801D082A834414FCF4805C0 /* Pods */,
-				D1D75D199EAF22FCC8AA030D /* Frameworks */,
+				314DDE81DFD18361E1EC62EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +172,7 @@
 				5CDFA8CE28B4CDAD0073B4CE /* ViewModel */,
 				5CDFA8CD28B4CDA20073B4CE /* Model */,
 				5CDFA8D128B4CDE40073B4CE /* SupportingFiles */,
+				5C39995428B4CB8E00103DD3 /* Info.plist */,
 			);
 			path = TekoProduct;
 			sourceTree = "<group>";
@@ -210,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				5C39994F28B4CB8E00103DD3 /* Assets.xcassets */,
-				5C39995428B4CB8E00103DD3 /* Info.plist */,
 				5C39994C28B4CB8E00103DD3 /* Main.storyboard */,
 				5C39995128B4CB8E00103DD3 /* LaunchScreen.storyboard */,
 			);
@@ -259,18 +267,10 @@
 		A801D082A834414FCF4805C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */,
-				011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */,
+				8B21002DFE421880812A6F53 /* Pods-TekoProduct.debug.xcconfig */,
+				CFB114BB92B30F5F452E1FF1 /* Pods-TekoProduct.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D1D75D199EAF22FCC8AA030D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,11 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C39995728B4CB8E00103DD3 /* Build configuration list for PBXNativeTarget "TekoProduct" */;
 			buildPhases = (
-				F271287D870052C44912F5A9 /* [CP] Check Pods Manifest.lock */,
+				4C92BCB83A199DCD4F25FC03 /* [CP] Check Pods Manifest.lock */,
 				5C39993F28B4CB8E00103DD3 /* Sources */,
 				5C39994028B4CB8E00103DD3 /* Frameworks */,
 				5C39994128B4CB8E00103DD3 /* Resources */,
-				BC4E27EA0DFB2387324BFA68 /* [CP] Embed Pods Frameworks */,
+				46D5A86394340D26D1BDA7BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,7 +346,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BC4E27EA0DFB2387324BFA68 /* [CP] Embed Pods Frameworks */ = {
+		46D5A86394340D26D1BDA7BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -363,7 +363,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F271287D870052C44912F5A9 /* [CP] Check Pods Manifest.lock */ = {
+		4C92BCB83A199DCD4F25FC03 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,13 +558,14 @@
 		};
 		5C39995828B4CB8E00103DD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */;
+			baseConfigurationReference = 8B21002DFE421880812A6F53 /* Pods-TekoProduct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B696CGDCC;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TekoProduct/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -588,13 +589,14 @@
 		};
 		5C39995928B4CB8E00103DD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */;
+			baseConfigurationReference = CFB114BB92B30F5F452E1FF1 /* Pods-TekoProduct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B696CGDCC;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TekoProduct/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
