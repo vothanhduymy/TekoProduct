@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		501CF085E7D84546FA762E77 /* Pods_TekoProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */; };
 		5C077B1F28B61F42004509BF /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B1E28B61F42004509BF /* PopupView.swift */; };
 		5C077B2128B62124004509BF /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2028B62124004509BF /* UIApplication+Ext.swift */; };
 		5C077B2328B62162004509BF /* BaseXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C077B2228B62162004509BF /* BaseXibView.swift */; };
@@ -39,11 +40,11 @@
 		5CF5EBC728B72D08001145DB /* DefaultTekoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBC628B72D08001145DB /* DefaultTekoRepository.swift */; };
 		5CF5EBC928B72F2D001145DB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */; };
 		5CF5EBCB28B72F72001145DB /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */; };
-		89483F39635440BCFC3572A2 /* Pods_TekoProduct.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E79329F0164E2115B7E9950C /* Pods_TekoProduct.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23A2C2FEF3494EF243036AF9 /* Pods-TekoProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.debug.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.debug.xcconfig"; sourceTree = "<group>"; };
+		011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.release.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.release.xcconfig"; sourceTree = "<group>"; };
+		04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.debug.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.debug.xcconfig"; sourceTree = "<group>"; };
 		5C077B1E28B61F42004509BF /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		5C077B2028B62124004509BF /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		5C077B2228B62162004509BF /* BaseXibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseXibView.swift; sourceTree = "<group>"; };
@@ -78,8 +79,7 @@
 		5CF5EBC628B72D08001145DB /* DefaultTekoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTekoRepository.swift; sourceTree = "<group>"; };
 		5CF5EBC828B72F2D001145DB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		5CF5EBCA28B72F72001145DB /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		AB9F7CFB8DE72F21001D0306 /* Pods-TekoProduct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoProduct.release.xcconfig"; path = "Target Support Files/Pods-TekoProduct/Pods-TekoProduct.release.xcconfig"; sourceTree = "<group>"; };
-		E79329F0164E2115B7E9950C /* Pods_TekoProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoProduct.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,21 +87,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89483F39635440BCFC3572A2 /* Pods_TekoProduct.framework in Frameworks */,
+				501CF085E7D84546FA762E77 /* Pods_TekoProduct.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2360EA0DF8E7EECCD81888B7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E79329F0164E2115B7E9950C /* Pods_TekoProduct.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5C077B1A28B61DAD004509BF /* ProductViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +139,7 @@
 				5C39994528B4CB8E00103DD3 /* TekoProduct */,
 				5C39994428B4CB8E00103DD3 /* Products */,
 				A801D082A834414FCF4805C0 /* Pods */,
-				2360EA0DF8E7EECCD81888B7 /* Frameworks */,
+				D1D75D199EAF22FCC8AA030D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,10 +259,18 @@
 		A801D082A834414FCF4805C0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				23A2C2FEF3494EF243036AF9 /* Pods-TekoProduct.debug.xcconfig */,
-				AB9F7CFB8DE72F21001D0306 /* Pods-TekoProduct.release.xcconfig */,
+				04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */,
+				011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D1D75D199EAF22FCC8AA030D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				982B6FB157118C3D5153E2C7 /* Pods_TekoProduct.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,11 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C39995728B4CB8E00103DD3 /* Build configuration list for PBXNativeTarget "TekoProduct" */;
 			buildPhases = (
-				64AF98B4678FE1910C4ED679 /* [CP] Check Pods Manifest.lock */,
+				F271287D870052C44912F5A9 /* [CP] Check Pods Manifest.lock */,
 				5C39993F28B4CB8E00103DD3 /* Sources */,
 				5C39994028B4CB8E00103DD3 /* Frameworks */,
 				5C39994128B4CB8E00103DD3 /* Resources */,
-				D8589A6A4CC878FFB1587767 /* [CP] Embed Pods Frameworks */,
+				BC4E27EA0DFB2387324BFA68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,7 +346,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		64AF98B4678FE1910C4ED679 /* [CP] Check Pods Manifest.lock */ = {
+		BC4E27EA0DFB2387324BFA68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F271287D870052C44912F5A9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,23 +383,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D8589A6A4CC878FFB1587767 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoProduct/Pods-TekoProduct-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -558,7 +558,7 @@
 		};
 		5C39995828B4CB8E00103DD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23A2C2FEF3494EF243036AF9 /* Pods-TekoProduct.debug.xcconfig */;
+			baseConfigurationReference = 04598ECAB6D0B9DF3CF68038 /* Pods-TekoProduct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -588,7 +588,7 @@
 		};
 		5C39995928B4CB8E00103DD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB9F7CFB8DE72F21001D0306 /* Pods-TekoProduct.release.xcconfig */;
+			baseConfigurationReference = 011B9C5164E05C6971D81D78 /* Pods-TekoProduct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
