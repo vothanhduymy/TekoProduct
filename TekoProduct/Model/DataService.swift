@@ -55,6 +55,9 @@ class RxDataService: DataService {
                                 print(er)
                             }
                         }
+                        
+                        print(String(data: data, encoding: .utf8))
+                        
                         let result = try self.decoder.decode(T.self, from: data)
                         return .success(result)
                     } catch let err {

@@ -10,8 +10,8 @@ import Networkable
 import RxSwift
 
 protocol TekoRepository {
-    func getProducts() -> Observable<Result<BaseResponse<[Product]>, Error>>
-    func getColors() -> Observable<Result<BaseResponse<[Color]>, Error>>
+    func getColors() -> Observable<Result<[Color], Error>>
+    func getProducts() -> Observable<Result<[Product], Error>>
 }
 
 final class DefaultTekoRepository: TekoRepository {
@@ -23,12 +23,12 @@ final class DefaultTekoRepository: TekoRepository {
         self.dataService = dataService
     }
     
-    func getProducts() -> Observable<Result<BaseResponse<[Product]>, Error>> {
-        return dataService.buildObservable(APIEndpoint.getProducts)
+    func getColors() -> Observable<Result<[Color], Error>> {
+        return dataService.buildObservable(APIEndpoint.getColors)
     }
     
-    func getColors() -> Observable<Result<BaseResponse<[Color]>, Error>> {
-        return dataService.buildObservable(APIEndpoint.getColors)
+    func getProducts() -> Observable<Result<[Product], Error>> {
+        return dataService.buildObservable(APIEndpoint.getProducts)
     }
 }
 

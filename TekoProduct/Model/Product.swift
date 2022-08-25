@@ -14,15 +14,17 @@ struct Product: Mappable, Codable {
     var name: String = ""
     var sku: String = ""
     var image: String = ""
-    var color: Color?
+    var color: Int?
     var isEditing: Bool = false
     
-    init() {}
-    
+    enum CodingKeys: String, CodingKey {
+        case id, errorDescription, name, sku, image, color
+    }
+
     init?(map: Map) {
         mapping(map: map)
     }
-    
+
     mutating func mapping(map: Map) {
         id                  <- map["id"]
         errorDescription    <- map["errorDescription"]

@@ -30,6 +30,6 @@ class ProductTableViewCell: UITableViewCell {
         txtName.text = product.name
         txtErrorDes.text = product.errorDescription
         txtSku.text = product.sku
-        txtColor.text = product.color?.name
+//        txtColor.text = product.color?.name
     }
 }

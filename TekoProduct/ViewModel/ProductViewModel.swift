@@ -40,10 +40,8 @@ class ProductViewModel: BaseViewModel {
                 self.output.isLoading.onNext(false)
                 switch result {
                 case .success(let response):
-                    if let _colors = response.data?.data {
-                        self.colors = _colors
-                        self.output.getColors.onNext(true)
-                    }
+                    self.colors = response
+                    self.output.getColors.onNext(true)
                 case .failure(let error):
                     self.output.responseError.onNext(error.toResponseError())
                 }
@@ -63,10 +61,8 @@ class ProductViewModel: BaseViewModel {
                 self.output.isLoading.onNext(false)
                 switch result {
                 case .success(let response):
-                    if let _products = response.data?.data {
-                        self.products = _products
-                        self.output.getProducts.onNext(true)
-                    }
+                    self.products = response
+                    self.output.getProducts.onNext(true)
                 case .failure(let error):
                     self.output.responseError.onNext(error.toResponseError())
                 }

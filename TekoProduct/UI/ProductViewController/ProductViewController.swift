@@ -25,7 +25,8 @@ class ProductViewController: UIViewController {
         tblContent.addInfiniteScrolling { [weak self] in
             guard let self = self else { return }
         }
-        viewModel.getProducts()
+        
+        viewModel.getColors()
         
         bindViewModel()
     }
@@ -35,6 +36,13 @@ class ProductViewController: UIViewController {
     }
     
     private func bindViewModel() {
+        viewModel.output.getColors
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] isSuccess in
+                guard let self = self else { return }
+                self.viewModel.getProducts()
+            }).disposed(by: disposeBag)
+        
         viewModel.output.getProducts
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] isShowsInfiniteScrolling in
@@ -76,7 +84,9 @@ extension ProductViewController: UITableViewDataSource {
         if cell ==  nil {
             cell = Bundle.main.loadNibNamed("ProductTableViewCell", owner: self)?.first as? ProductTableViewCell
         }
-        
+        let product = viewModel.products[indexPath.row]
+        cell?.reloadData(product)
+        cell?.txtColor.text = viewModel.colors.first(where: { $0.id == product.color })?.name
         return cell ?? UITableViewCell()
     }
 }
@@ -85,5 +95,9 @@ extension ProductViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
     }
 }
