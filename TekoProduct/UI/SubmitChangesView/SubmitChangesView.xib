@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SubmitChangesView" customModule="TekoProduct" customModuleProvider="target">
             <connections>
                 <outlet property="btnOK" destination="NbU-B1-c3V" id="oBK-Rh-lez"/>
+                <outlet property="heightTbl" destination="IqD-ZC-2gl" id="y9J-kP-Twv"/>
                 <outlet property="lblTitle" destination="TEp-gM-cnl" id="HG4-rd-Qwl"/>
                 <outlet property="tblContent" destination="emf-NQ-f7a" id="tYr-VD-8VJ"/>
                 <outlet property="vwContent" destination="tLJ-Yx-HWV" id="h9h-Yh-DWR"/>
