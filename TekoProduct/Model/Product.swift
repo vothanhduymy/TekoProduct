@@ -15,6 +15,7 @@ struct Product: Mappable, Codable {
     var sku: String = ""
     var image: String = ""
     var color: Color?
+    var isEditing: Bool = false
     
     init() {}
     

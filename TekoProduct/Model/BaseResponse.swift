@@ -10,8 +10,6 @@ import Foundation
 struct BaseResponse<T: Codable>: Codable {
     var result: Bool?
     var data: BaseModel<T>?
-    var additional: String?
-    var id: String?
     var error: ResponseError?
     
     var isSuccess: Bool {

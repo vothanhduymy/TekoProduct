@@ -8,7 +8,6 @@
 import UIKit
 
 class ProductTableViewCell: UITableViewCell {
-    var isEdit: Bool = false
     @IBOutlet weak var imgImage: UIImageView!
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtErrorDes: UITextField!
@@ -23,6 +22,7 @@ class ProductTableViewCell: UITableViewCell {
     }
     
     @IBAction func btnEditTapped(_ sender: Any) {
+        
     }
     
     func reloadData(_ product: Product) {

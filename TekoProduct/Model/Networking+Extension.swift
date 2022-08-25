@@ -11,12 +11,10 @@ import RxSwift
 
 extension Endpoint {
     
-//    var headers: [String : String]? {
-//        let dicHeader: [String : String] = [
-//            "app-id": API_ID,
-//        ]
-//        return dicHeader
-//    }
+    var headers: [String : String]? {
+        let dicHeader: [String : String] = [:]
+        return dicHeader
+    }
 
     func buildRequestBody<T: Encodable>(_ body: T, encoder: JSONEncoder = JSONEncoder()) throws -> Data?{
         return try encoder.encode(body)
