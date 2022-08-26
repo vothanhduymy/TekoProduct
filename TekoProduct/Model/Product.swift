@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class Product: Mappable, Codable {
+class Product: Mappable, Codable, Equatable {
     var id: Int = 0
     var errorDescription: String = ""
     var name: String = ""
@@ -19,6 +19,10 @@ class Product: Mappable, Codable {
     
     enum CodingKeys: String, CodingKey {
         case id, errorDescription, name, sku, image, color
+    }
+    
+    static func == (lhs: Product, rhs: Product) -> Bool {
+        return lhs.id == rhs.id
     }
 
     required init?(map: Map) {

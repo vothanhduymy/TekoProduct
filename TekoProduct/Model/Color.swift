@@ -9,8 +9,8 @@ import Foundation
 import ObjectMapper
 
 struct Color: Mappable, Codable {
-    var id: Int?
-    var name: String?
+    var id: Int = 0
+    var name: String = ""
     
     init?(map: Map) {
         mapping(map: map)

@@ -23,12 +23,22 @@ class ProductTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        txtName.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        txtSku.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     @IBAction func btnEditTapped(_ sender: Any) {
         didEdit?()
     }
     
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        if textField == txtName {
+            product.name = textField.text?.trimmed ?? ""
+        } else if textField == txtSku {
+            product.sku = textField.text?.trimmed ?? ""
+        }
+        reloadData()
+    }
     
     @IBAction func btnChangeColorTapped(_ sender: Any) {
         if product.isEditing {

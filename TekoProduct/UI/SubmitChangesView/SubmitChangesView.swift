@@ -14,6 +14,7 @@ class SubmitChangesView: PopupView {
     var products: [Product] = []
     var colors: [Color] = []
     @IBOutlet weak var heightTbl: NSLayoutConstraint!
+    var didClose: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,9 +23,12 @@ class SubmitChangesView: PopupView {
     
     override func showPopup() {
         showPopupWithCompletion(nil, onController: Util.topViewController())
+        tblContent.reloadData()
+        heightTbl.constant = CGFloat(products.count * 175)
     }
     
     @IBAction func btnOKTapped(_ sender: Any) {
+        didClose?()
         dismissPopupWithCompletion(nil)
     }
     
@@ -34,6 +38,7 @@ class SubmitChangesView: PopupView {
     }
     
     private func commonInit() {
+        isModal = false
         tblContent.dataSource = self
         tblContent.delegate = self
         

@@ -35,8 +35,13 @@ class ProductViewController: UIViewController {
     
     @IBAction func btnSubmitTapped(_ sender: Any) {
         let popup: SubmitChangesView = SubmitChangesView()
+        popup.contentCornerRadius = 5
         popup.products = viewModel.editedProducts
         popup.colors = viewModel.colors
+        popup.didClose = { [weak self] in
+            guard let self = self else { return }
+            self.viewModel.editedProducts.removeAll()
+        }
         popup.showPopup()
     }
     
@@ -89,7 +94,7 @@ extension ProductViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var product = viewModel.products[indexPath.row]
+        let product = viewModel.products[indexPath.row]
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as? ProductTableViewCell
         if cell ==  nil {
@@ -104,17 +109,18 @@ extension ProductViewController: UITableViewDataSource {
             product.isEditing.toggle()
             if product.isEditing {
                 self.viewModel.editedProducts.append(product)
-//                self.viewModel.editedProducts = self.viewModel.editedProducts.withoutDuplicates { p in
-//                    p.id
-//                }
-//                
+                //                self.viewModel.editedProducts = self.viewModel.editedProducts.withoutDuplicates { p in
+                //                    p.id
+                //                }
+                //
+                self.viewModel.editedProducts.removeDuplicates()
             }
             tableView.reloadData()
         }
         
         cell?.didChangeColor = { [weak self] in
             guard let self = self else { return }
-            let picker: ActionSheetStringPicker = ActionSheetStringPicker(title: "Choose color", rows: self.viewModel.colors.map({ $0.name ?? [] ?? "" }), initialSelection: 0, doneBlock: { [weak self] _, _selectedIndex, _ in
+            let picker: ActionSheetStringPicker = ActionSheetStringPicker(title: "Choose color", rows: self.viewModel.colors.map({ $0.name }), initialSelection: 0, doneBlock: { [weak self] _, _selectedIndex, _ in
                 guard let self = self else { return }
                 product.color = self.viewModel.colors[_selectedIndex].id
                 tableView.reloadData()
